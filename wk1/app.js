@@ -10,6 +10,8 @@ var ask1 = true;
 var ask2 = true;
 var ask3 = true;
 var ask4 = 0;
+var numQues = 0;
+var rightAns = 0;
 
 while (ask1) {
   var userAns = prompt('Was I born in Ukraine?');
@@ -20,6 +22,7 @@ while (ask1) {
     ask1 = false;
   } else if (userAns.toUpperCase() === 'N' || userAns.toLowerCase() === 'no') {
     alert('Well done, ' + userNameF + '. You\'re not as dumb as you look.');
+    rightAns++;
     console.log('User\'s response was ' + userAns);
     ask1 = false;
   } else {
@@ -27,6 +30,8 @@ while (ask1) {
     console.log('User\'s response was ' + userAns);
   }
 }
+
+numQues++;
 
 while (ask2) {
   var userAns = prompt('Did I study fashion design?');
@@ -37,6 +42,7 @@ while (ask2) {
     ask2 = false;
   } else if (userAns.toUpperCase() === 'N' || userAns.toLowerCase() === 'no') {
     alert('You got it, ' + userNameF + '.');
+    rightAns++;
     console.log('User\'s response was ' + userAns);
     ask2 = false;
   } else {
@@ -45,12 +51,15 @@ while (ask2) {
   }
 }
 
+numQues++;
+
 while (ask3) {
   var userAns = prompt('Do I play guitar?');
   console.log('User\'s response was ' + userAns);
   if (userAns.toUpperCase() === 'Y' || userAns.toLowerCase() === 'yes') {
     alert('Yes, indeed, ' + userNameF + ', that is correct. You shall be spared.');
     console.log('User\'s response was ' + userAns);
+    rightAns++;
     ask3 = false;
   } else if (userAns.toUpperCase() === 'N' || userAns.toLowerCase() === 'no') {
     alert('All you had to do was read the document, ' + userNameF + '.');
@@ -62,12 +71,15 @@ while (ask3) {
   }
 }
 
+numQues++;
+
 while (ask4 < 4) {
   var userAns = prompt('If I went graduated from college in 2009, how old am I today?');
   ask4++;
   console.log(userNameF + ' guessed ' + userAns + '.');
   if (userAns == 29) {
     alert('Look at John Nash over here...');
+    rightAns++;
     console.log('User\'s response was ' + userAns);
     { break; }
   } else if (userAns > 29) {
@@ -85,17 +97,22 @@ while (ask4 < 4) {
   }
 }
 
+numQues++;
+
 var interests = ['guitar', 'foreign languages', 'reading', 'traveling'];
-var intAns = prompt('One of my interests is ______.');
+var intAns = prompt('One of my interests is ______.').toLowerCase();
 var rightAns = false;
 
 for (var i = 0; i < interests.length; i++) {
   console.log('interests[' + i + ']: ' + interests[i]);
-  if (intAns === intUp) {
+  if (intAns === interests[i]) {
     alert('Have you been stalking me, ' + userNameF + '? You know me to a T.')
     rightAns = true;
+    rightAns++;
   }
 }
 if (!rightAns) {
   alert('No. Wrong.');
 }
+
+numQues++;
