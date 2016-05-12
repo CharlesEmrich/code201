@@ -4,7 +4,7 @@ var userNameR = userName.substring(1, userName.length);
 var userNameF = userNameI + userNameR;
 console.log('User\'s name is ' + userNameF + '.');
 
-alert('Hello, ' + userNameF + ', you worthless piece of shit. We will now play a game. You must provide answers to the following yes/no questions or face certain death.');
+alert('Hello, ' + userNameF + ', you worthless POS. We will now play a game. You must provide answers to the following yes/no questions or face certain death.');
 
 var ask1 = true;
 var ask2 = true;
