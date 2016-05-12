@@ -1,3 +1,32 @@
-ul {
-  padding-left: 20px
+.white {
+  background-color: #FFFFFF;
+}
+
+.blue {
+  background-color: #10429E;
+}
+
+.red {
+  background-color: #9E1023;
+}
+
+div {
+  height: 250px;
+}
+
+div h2 {
+  margin-top: 0px;
+}
+
+h1, h2 {
+  color: steelblue;
+}
+
+p {
+  color: orange;
+}
+
+ul, ol {
+  padding-left: 20px;
+  color: green;
 }
